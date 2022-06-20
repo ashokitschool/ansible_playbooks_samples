@@ -1,0 +1,5 @@
+# write a playbook to copy content into a file
+- hosts: all
+  tasks:
+    - name: Copy content to a file
+      copy: content="Hello World \n" dest=/home/ansible/hello.txt

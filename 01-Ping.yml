@@ -1,0 +1,7 @@
+# Write a playbook to ping all host nodes
+---
+- hosts: all
+  tasks:
+    - name: Ping All Host Nodes
+      ping:
+      remote_user: ansible

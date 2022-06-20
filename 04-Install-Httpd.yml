@@ -1,0 +1,8 @@
+# Write a playbook to install httpd package in all host nodes
+- hosts: all
+  become: true
+  tasks:
+    - name: install httpd package
+      yum:
+        name: httpd
+        state: latest

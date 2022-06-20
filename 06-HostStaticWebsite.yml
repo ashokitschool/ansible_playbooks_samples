@@ -1,0 +1,16 @@
+# Write a playbook to install httpd, copy index.html and start httpd server
+- hosts: all
+  become: true
+  tasks:
+    - name: install httpd package
+      yum:
+        name: httpd
+        state: latest
+    - name: copy index.html file
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+    - name: start httpd service
+      service:
+        name: httpd
+        state: started
