@@ -1,9 +1,8 @@
-# ANSIBLE_PLAYBOOKS
-ANSIBLE_PLAYBOOKS
+# ANSIBLE_PLAYBOOKS Commands
 
 # Run the playbook Using below command
 
-$ ansible-playbook <<Playbbok file name>>
+$ ansible-playbook playbook.yml
 
 # run the playbook.yml in verbose
 
