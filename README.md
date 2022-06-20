@@ -1,19 +1,17 @@
 # ANSIBLE_PLAYBOOKS Commands
 
 # Run the playbook Using below command
-
 $ ansible-playbook playbook.yml
 
 # run the playbook.yml in verbose
-
 $ ansible-playbook playbook.yml -v
 $ ansible-playbook playbook.yml -vv
 $ ansible-playbook playbook.yml -vvv
 
-$ It will provide help on ansible_playbook command
+# It will provide help on ansible_playbook command
 $ ansible-playbook --help
 
-#  It will check the syntax of a playbook
+# It will check the syntax of a playbook
 $ ansible-playbook playbook.yml --syntax-check
 
 # It will do in dry run.
