@@ -1,0 +1,26 @@
+# Working with Handlers and Tags
+- hosts: all
+  become: true
+  gather_facts: no
+  vars:
+    package_name: httpd
+  tasks:
+    - name: install httpd
+      yum:
+        name: "{{package_name}}"
+        state: present
+      tags:
+        - install
+    - name: Copy index.html
+      copy:
+        src: index.html
+        dest: /var/www/html/
+      tags:
+          - copy
+      notify:
+        Start Httpd Server
+  handlers:
+    - name: Start Httpd Server
+      service:
+        name: "{{package_name}}"
+        state: started
